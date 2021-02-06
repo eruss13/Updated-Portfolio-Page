@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Additional recommended scripts from w3schools.com -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Added for js scripts to toggle buttons -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Found the need to invoke my own style sheet to manage custom styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="jumbotron" style="background-image: url(./images/background-tech-07.jpg) " alt="background-image tech;" >
+        <!-- Build the navbar and format with dark and responsive small icon -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <!-- style my name with link to LinkedIn + LinkedIn icon + Github icon -->
+            <a id="title-name" class="navbar-brand" href="https://www.linkedin.com/in/ethan-russell-66a580188/" target="_blank">Ethan Russell <i class="fa fa-linkedin-square" style="font-size:20px;color:white"></i></a>
+            <a id="title-name" class="navbar-brand" href="https://github.com/eruss13" target="_blank"><i class="fa fa-github-square" style="font-size:20px;color:white"></i></a>
+            <!-- Adding a hamburger icon when collapsed in small screen -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Create collapsable buttons -->
+            <div class="navbar-collapse collapse ml-auto" id="collapsibleNavbar">
+                <!-- right-align the navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <li id="about" class="nav-item ml-auto button">
+                        <!-- <button>About</button> -->
+                      <a class="nav-link" href="#" onclick="changeCSS('css/style.css', 1, 'images/background-tech-07.jpg');">About</a>
+                    </li>
+                    <li id="contact" class="nav-item ml-auto">
+                      <a class="nav-link" href="#" onclick="changeCSS('css/contact.css', 1, 'images/background-tech-12.jpg');">Contact</a>
+                    </li>
+                    <li id="portfolio" class="nav-item ml-auto">
+                      <a class="nav-link" href="./portfolio.html" onclick="changeCSS('css/portfolio.css', 1, 'images/background-tech-06.jpg');">Portfolio</a>
+                    </li>    
+                  </ul>
+              </div>  
+        </nav>
+    
+        <!-- Container for the content -->
+        <main>
+            <div class="border-top container" id="aboutPage">
+                <span><h3>About Me</h3><a href="https://drive.google.com/file/d/1VU7L00X-2CwBd74S3RpmNdkKifcUPNGg/view?usp=sharing" target="_blank">Resume</a></span>
+                <hr>
+                <!-- Added custom margin into the style.css and invoked using class="about-img" -->
+                <img id="about-img" src="images/linkedIn.jpg" alt="LinkedIn Image" class="float-left about-img" height="150px" width="150px">
+                <p>I was born in Hempstead, New York. Growing up, I spent most of my time playing sports and playing the saxophone. I have always had a strong interest in music and have also picked up the guitar and piano since learning the saxophone.</p>
+                <p>I am currently taking a break from pursuing my bachelors degree at Virginia Commonwealth University where I am studying Physics to take the bootcamp classes.</p>
+                <p>I have not been able to </a>.
+              
+            </div>
+        
+            <div class="contact-page" id="contactPage">
+                <form class="border-top container article-content">
+                    <h3>Contact</h3>
+                    <hr>
+                    <section class="row">
+                        <!-- Need to revisit the Semantic tags to not use <header> -->
+                        <header class="col-xs">
+                            <label for="name">Full Name:</label>
+                        </header>
+                        <span class="col-lg">
+                            <input type="text" id="name" name="name" placeholder="Your full name...">
+                        </span>
+                    </section>
+                    <section class="row">
+                        <header class="col-xs">
+                            <label for="email">Email:</label>
+                        </header>
+                        <span class="col-lg">
+                            <input type="text" id="email" name="email" placeholder="Your email...is safe with me">
+                        </span>
+                    </section>
+                    <section class="row">
+                        <header class="col-xs">
+                            <label for="subject">Comment:</label>
+                        </header>
+                        <span class="col-lg">
+                            <textarea id="comment" name="comment" placeholder="What's on your mind?" style="height:100px"></textarea>
+                        </span>
+                    </section>
+                    <section class="row">
+                        <input type="submit" value="Submit">
+                    </section>
+                </form>    
+            </div>
+            <div class="portfolio-page" id="portfolioPage">
+                <article class="border-top container article-content">
+                    <h3>Portfolio</h3>
+                    <hr>
+                    
+                    <section class="row">                                               
+                        <!-- NBA Odds and Statistics -->
+                        <div class="col-sm-6 d-flex align-items-stretch mb-3">
+                            <div class="card" style="width: 18rem;">
+                                <h5 class="card-header bg-transparent border-success">NBA Odds and Statistics</h5>
+                                <img src="./images/odds_statistics.png" class="card-img-top border-success" alt="NBA Odds and Statistics">
+                                <div class="card-body border-success">
+                                    <p class="card-text">Looking for stats on your NBA team of choice? Maybe want to wager a bet based on bookie site odds?</p>
+                                    <a href="https://codragon2020.github.io/odds_and_statistics/" target="_blank" class="btn btn-primary">View App</a>
+                                    <a href="https://github.com/codragon2020/odds_and_statistics" target="_blank" class="btn btn-primary">View Code</a>
+                                </div>
+                                <div class="card-footer bg-transparent border-success">Created in Jan 2021</div>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="container">
+                <span class="text-muted"><code>&copy;</code> Ethan Russell</span>
+            </section>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
